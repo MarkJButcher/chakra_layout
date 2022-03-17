@@ -16,30 +16,22 @@ import {
 } from "@chakra-ui/react"
 import { PhoneIcon, AddIcon, WarningIcon } from '@chakra-ui/icons';
 
-const StyledDrawer = chakra(Drawer, {
-  display: 'flex',
+const StyledDrawer = chakra(Box, {
+  position: 'fixed',
 });
 
 const SideBar = () => {
   return (
-    <div>
-      <StyledDrawer
-        placement='left'
-        isOpen={true}
-        variant="permanent"
-        size='xs'
-        useInert={false}
-      >
-        <DrawerContent>
-          <DrawerHeader borderBottomWidth='1px'>Basic Drawer</DrawerHeader>
-          <DrawerBody>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-          </DrawerBody>
-        </DrawerContent>
-      </StyledDrawer>
-    </div>
+    <Flex
+      position='absolute'
+      height='100vh'
+      width='23vw'
+      minWidth='300px'
+      maxWidth='380px'
+      backgroundColor='white'
+      borderRightColor='grey'
+      borderRightWidth={1}
+    ></Flex>
   )
 }
 
